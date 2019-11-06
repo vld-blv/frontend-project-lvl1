@@ -1,9 +1,10 @@
 
+import gameProcess from '..';
 import getRandomInt from '../random';
 
-export const description = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
-export const makeProgression = () => {
+const gameQuestionAndAnswer = () => {
   const start = getRandomInt(1, 20);
   const step = getRandomInt(2, 4);
   const hiddenNumberPosition = getRandomInt(1, 9);
@@ -19,3 +20,5 @@ export const makeProgression = () => {
   console.log(`Question: ${prog}`);
   return correctAnswer;
 };
+
+export default () => gameProcess(description, gameQuestionAndAnswer);

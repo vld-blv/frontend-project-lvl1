@@ -1,9 +1,10 @@
 
+import gameProcess from '..';
 import getRandomInt from '../random';
 
 export const description = 'Find the greatest common divisor of given numbers.';
 
-export const greatestCommonDivisor = () => {
+export const gameQuestionAndAnswer = () => {
   const a = getRandomInt(1, 40);
   const b = getRandomInt(1, 50);
   const gcd = (n, m) => {
@@ -14,3 +15,5 @@ export const greatestCommonDivisor = () => {
   console.log(`Question: ${a} ${b}`);
   return correctAnswer;
 };
+
+export default () => gameProcess(description, gameQuestionAndAnswer);

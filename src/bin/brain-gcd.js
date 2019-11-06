@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import gameProcess from '..';
-import { description, greatestCommonDivisor } from '../games/gcd';
+import playGame from '../games/gcd';
 
-gameProcess(description, greatestCommonDivisor);
+
+playGame();

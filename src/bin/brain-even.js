@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import gameProcess from '..';
-import { description, isEvenNumber } from '../games/even';
+import playGame from '../games/even';
 
-gameProcess(description, isEvenNumber);
+
+playGame();

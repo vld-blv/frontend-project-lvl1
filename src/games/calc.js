@@ -1,12 +1,13 @@
 
+import gameProcess from '..';
 import getRandomInt from '../random';
 
 
 const operators = '*+-';
 
-export const description = 'What is the result of the expression?';
+const description = 'What is the result of the expression?';
 
-export const calc = () => {
+const gameQuestionAndAnswer = () => {
   const a = getRandomInt(1, 40);
   const b = getRandomInt(1, 50);
   const randomOperator = operators.substr(getRandomInt(0, operators.length - 1), 1);
@@ -29,3 +30,5 @@ export const calc = () => {
 
   return correctAnswer;
 };
+
+export default () => gameProcess(description, gameQuestionAndAnswer);
