@@ -3,9 +3,9 @@ import gameProcess from '..';
 import getRandomInt from '../random';
 
 
-const operators = '*+-';
-
 const description = 'What is the result of the expression?';
+
+const operators = '*+-';
 
 const gameQuestionAndAnswer = () => {
   const a = getRandomInt(1, 40);
