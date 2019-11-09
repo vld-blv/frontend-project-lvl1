@@ -1,4 +1,5 @@
 
+import { cons } from '@hexlet/pairs';;
 import gameProcess from '..';
 import getRandomInt from '../random';
 
@@ -13,9 +14,9 @@ const isPrimeNumber = (n) => {
 
 const gameQuestionAndAnswer = () => {
   const number = getRandomInt(1, 100);
+  const question = number;
   const correctAnswer = isPrimeNumber(number);
-  console.log(`Question: ${number}`);
-  return correctAnswer;
+  return cons(question, correctAnswer);
 };
 
 export default () => gameProcess(description, gameQuestionAndAnswer);

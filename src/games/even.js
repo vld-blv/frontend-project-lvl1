@@ -1,4 +1,5 @@
 
+import { cons } from '@hexlet/pairs';
 import gameProcess from '..';
 import getRandomInt from '../random';
 
@@ -9,9 +10,9 @@ const isEven = (x) => x % 2 === 0;
 
 const gameQuestionAndAnswer = () => {
   const number = getRandomInt(1, 100);
-  console.log(`Question: ${number}`);
+  const question = number;
   const correctAnswer = isEven(number) ? 'yes' : 'no';
-  return correctAnswer;
+  return cons(question, correctAnswer);
 };
 
 export default () => gameProcess(description, gameQuestionAndAnswer);
