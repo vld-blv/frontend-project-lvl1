@@ -1,11 +1,11 @@
 
 import { cons } from '@hexlet/pairs';
-import gameProcess from '..';
+import playGame from '..';
 import getRandomInt from '../random';
 
 const description = 'What number is missing in the progression?';
 
-const gameQuestionAndAnswer = () => {
+const getGameQuestionAndAnswer = () => {
   const start = getRandomInt(1, 20);
   const step = getRandomInt(2, 4);
   const hiddenNumberPosition = getRandomInt(1, 9);
@@ -22,4 +22,4 @@ const gameQuestionAndAnswer = () => {
   return cons(progression, correctAnswer);
 };
 
-export default () => gameProcess(description, gameQuestionAndAnswer);
+export default () => playGame(description, getGameQuestionAndAnswer);

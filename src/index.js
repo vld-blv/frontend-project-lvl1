@@ -3,7 +3,7 @@ import { car, cdr } from '@hexlet/pairs';
 import readlineSync from 'readline-sync';
 
 
-const gameProcess = (description, gameQuestionAndAnswer) => {
+const playGame = (description, gameQuestionAndAnswer) => {
   console.log('Welcome to the Brain Games!');
   console.log(description);
   const playerName = readlineSync.question('\nMay I have your name? ');
@@ -24,4 +24,4 @@ const gameProcess = (description, gameQuestionAndAnswer) => {
   }
 };
 
-export default gameProcess;
+export default playGame;
