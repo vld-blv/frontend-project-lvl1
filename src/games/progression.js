@@ -5,21 +5,23 @@ import getRandomInt from '../random';
 
 const description = 'What number is missing in the progression?';
 
+const progressionLength = 10;
+
 const getGameQuestionAndAnswer = () => {
   const start = getRandomInt(1, 20);
   const step = getRandomInt(2, 4);
   const hiddenNumberPosition = getRandomInt(1, 9);
-  let progression = '';
-  for (let i = 0; i < 10; i += 1) {
+  let question = '';
+  for (let i = 0; i < progressionLength; i += 1) {
     if (i === hiddenNumberPosition) {
-      progression = `${progression} ..`;
+      question = `${question} ..`;
     } else {
-      progression = `${progression} ${start + (step * i)}`;
+      question = `${question} ${start + (step * i)}`;
     }
   }
   const correctAnswer = start + step * hiddenNumberPosition;
 
-  return cons(progression, correctAnswer);
+  return cons(question, correctAnswer);
 };
 
 export default () => playGame(description, getGameQuestionAndAnswer);
