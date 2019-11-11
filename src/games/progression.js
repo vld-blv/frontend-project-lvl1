@@ -16,7 +16,7 @@ const getGameQuestionAndAnswer = () => {
     if (i === hiddenNumberPosition) {
       question = `${question} ..`;
     } else {
-      question = `${question} ${start + (step * i)}`;
+      question = `${question} ${start + (step * i)}`.trim();
     }
   }
   const correctAnswer = start + step * hiddenNumberPosition;
