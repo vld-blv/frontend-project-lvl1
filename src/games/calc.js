@@ -26,7 +26,7 @@ const getGameQuestionAndAnswer = () => {
       correctAnswer = a - b;
       break;
     default:
-      console.log(null);
+      return null;
   }
 
   return cons(question, correctAnswer);
