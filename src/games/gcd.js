@@ -5,16 +5,16 @@ import getRandomInt from '../random';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const gcd = (n, m) => {
+const getGCD = (n, m) => {
   if (m === 0) return n;
-  return gcd(m, n % m);
+  return getGCD(m, n % m);
 };
 
 const gameQuestionAndAnswer = () => {
   const a = getRandomInt(1, 40);
   const b = getRandomInt(1, 50);
   const question = `${a} ${b}`;
-  const correctAnswer = gcd(a, b);
+  const correctAnswer = getGCD(a, b);
   return cons(question, correctAnswer);
 };
 
