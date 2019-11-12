@@ -8,7 +8,8 @@
 
 Installation:
 
-```npm install frontend-project-lvl1```
+`npm install frontend-project-lvl1`
+
 ---
 
 #### Brain-even
