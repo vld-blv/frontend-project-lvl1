@@ -5,7 +5,8 @@
 ### This is a series of small console games.
 
 
-Installation:  
+Installation:
+
 `npm install frontend-project-lvl1`
 ---
 
